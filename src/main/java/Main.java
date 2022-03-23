@@ -1,58 +1,37 @@
-import java.util.HashMap;
-import java.util.Scanner;
-
 public class Main {
+    public static <T> void out(T t) {
+        System.out.println(t);
+    }
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int[] num = new int[n];
-        for (int i = 0; i < n; i++) {
-            num[i] = in.nextInt();
-        }
-        int ans = 0;
-        for (int i = 0; i < n; i++) {
-            if (i == 0) {
-                if (num[i] > num[i + 1]
-                ) ans++;
-            } else if (i == n - 1) {
-                if (num[i] > num[i - 1]) ans++;
-            } else {
-                if (num[i] > num[i - 1] && num[i] > num[i + 1]) ans++;
-            }
-        }
-        System.out.println(ans);
+        Integer a=128;
+        Integer b=128;
+        System.out.println(a==b);
+        String S1="123";
+        String S2=new String("123");
+        out(S2=S1);
+        parent p=new son();
+        p.fun1();
+        p.fun2();
     }
 }
 
-//        HashMap<Integer,Integer> map=new HashMap<>();
-//        for(int i=0;i<n;i++){
-//            if(!map.containsKey(num[i])){
-//                if(cal(num,num[i])>ans)ans=cal(num,num[i]);
-//                map.put(num[i],1);
-//            }
-//        }
-//        System.out.println(ans
-//        );
-//    }
-//    static int cal(int[] num,int n){
-//        int[] nums=new int[num.length];
-//        for(int i=0;i<num.length;i++){
-//            if(num[i]<n)nums[i]=0;
-//            else
-//            nums[i]=num[i];
-//        }
-//        int t=0;
-//        int ans=0;
-//
-//        for(int i=0;i<num.length;i++){
-//            if(nums[i]!=0)t=1;
-//            else {
-//                if(t==1)ans++;
-//                t=0;
-//            }
-//        }
-//        if(t==1)ans++;
-//        return ans;
-//
-//    }
-//}
+
+class parent{
+    void fun1(){
+        System.out.println("parent fun1");
+    }
+    void fun2(){
+        System.out.println("parent fun2");
+    }
+}
+
+class son extends parent{
+    void fun1(String a){
+        System.out.println("son fun1");
+
+    }
+    void fun2(){
+        System.out.println("son fun2");
+    }
+}
