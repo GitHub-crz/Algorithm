@@ -84,3 +84,24 @@ class Handler extends Thread {
         }
     }
 }
+//
+//#include "windows.h"
+//        #pragma comment(lib,"user32.lib")
+//        int main()
+//        {
+//        STARTUPINFO si;
+//        PROCESS_INFORMATION pi;
+//        char DeskName[]="pp";
+//        HDESK hold = GetThreadDesktop(GetCurrentThreadId());
+//        HDESK hhdesk = CreateDesktop( DeskName, NULL, NULL, DF_ALLOWOTHERACCOUNTHOOK, GENERIC_ALL, NULL);
+//        SwitchDesktop( hhdesk);
+//        SetThreadDesktop( hhdesk);
+//        ZeroMemory( &si, sizeof(si) );
+//        si.cb = sizeof(si);
+//        si.lpDesktop = DeskName;
+//        ZeroMemory( π, sizeof(pi) );
+//        CreateProcess( NULL, "explorer", NULL, NULL, FALSE, 0, NULL, NULL, &si, π);
+//        Sleep(60000);
+//        SwitchDesktop( hold);
+//        CloseDesktop( hhdesk);
+//        }
