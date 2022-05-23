@@ -31,5 +31,6 @@ public class ConnectRedis {
             String key = it.next();
             System.out.println(key);
         }
+        System.out.println(jedis.get("user"));
     }
 }
